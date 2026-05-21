@@ -117,6 +117,21 @@ const translations = {
     footer_tagline: "Consultoría Empresarial Estratégica",
     footer_copy:    "© 2026 Praxis Delta. Todos los derechos reservados.",
 
+    /* ── EQUIPO ── */
+    eq_tag:           "El Equipo",
+    eq_title:         "Las personas detrás de Praxis",
+    eq_lead:          "Consultores estratégicos con experiencia real en negocios, finanzas, ventas y desarrollo organizacional.",
+    eq_vivi_role:     "Socia Fundadora",
+    eq_vivi_bio:      "Ingeniera en Administración con mención en Marketing y Finanzas. Master de Emprendedores IPP – España. 15 años de experiencia en Banca, Inversiones, Marketing y Formación de equipos. Especializada en entrenamientos comerciales estratégicos: ventas consultivas, prospección efectiva y cierres comerciales.",
+    eq_jose_role:     "Socio Director",
+    eq_jose_bio:      "Lic. en Administración de Negocios Internacionales – Anáhuac. Maestría en Alta Dirección. Especialidad en Negociación por Harvard. 13+ años en desarrollo de negocios colaborativos, consultoría financiera y networking. Socio director en LOSOLI Consultores.",
+    eq_tag_ventas:    "Ventas Consultivas",
+    eq_tag_equipos:   "Formación de Equipos",
+    eq_tag_marketing: "Marketing Estratégico",
+    eq_tag_finanzas:  "Consultoría Financiera",
+    eq_tag_estrategia:"Alianzas Estratégicas",
+    eq_tag_networking:"Networking",
+
     /* ── SCROLL HINT ── */
     scroll_hint: "Scroll",
   },
@@ -234,6 +249,21 @@ const translations = {
     /* ── FOOTER ── */
     footer_tagline: "Strategic Business Consulting",
     footer_copy:    "© 2026 Praxis Delta. All rights reserved.",
+
+    /* ── EQUIPO ── */
+    eq_tag:           "The Team",
+    eq_title:         "The people behind Praxis",
+    eq_lead:          "Strategic consultants with real experience in business, finance, sales and organizational development.",
+    eq_vivi_role:     "Founding Partner",
+    eq_vivi_bio:      "Business Administration Engineer with a focus on Marketing and Finance. Entrepreneurs Master IPP – Spain. 15 years of experience in Banking, Investments, Marketing and Team Building. Specialized in strategic commercial training: consultative sales, effective prospecting and commercial closings.",
+    eq_jose_role:     "Managing Partner",
+    eq_jose_bio:      "B.S. in International Business Administration – Anáhuac. Master's in Senior Management. Negotiation Specialty from Harvard. 13+ years in collaborative business development, financial consulting and networking. Managing partner at LOSOLI Consultores.",
+    eq_tag_ventas:    "Consultative Sales",
+    eq_tag_equipos:   "Team Building",
+    eq_tag_marketing: "Strategic Marketing",
+    eq_tag_finanzas:  "Financial Consulting",
+    eq_tag_estrategia:"Strategic Alliances",
+    eq_tag_networking:"Networking",
 
     /* ── SCROLL HINT ── */
     scroll_hint: "Scroll",
