@@ -324,6 +324,10 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
   position: relative;
   overflow: hidden;
   padding: 120px 20px 80px;
+  background-image: url('media/img_praxis/5.svg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-bg { position: absolute; inset: 0; z-index: 0; }
@@ -522,7 +526,11 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 /* ════════════════════════════
    QUIÉNES
 ════════════════════════════ */
-.quienes { background: var(--bg); }
+.quienes {
+  background:
+    linear-gradient(rgba(2,26,39,0.82), rgba(2,26,39,0.82)),
+    url('media/img_praxis/3.svg') center center / cover no-repeat;
+}
 
 .quienes-inner {
   display: grid;
@@ -573,7 +581,11 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 /* ════════════════════════════
    MÉTODO
 ════════════════════════════ */
-.metodo { background: var(--bg-2); }
+.metodo {
+  background:
+    linear-gradient(rgba(3,31,48,0.88), rgba(3,31,48,0.88)),
+    url('media/img_praxis/1.svg') center center / cover no-repeat;
+}
 
 .metodo-steps {
   display: flex;
@@ -775,7 +787,9 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
    CTA BANNER
 ════════════════════════════ */
 .cta-banner {
-  background: linear-gradient(135deg, #031f30 0%, #052e49 100%);
+  background:
+    linear-gradient(135deg, rgba(3,31,48,0.88) 0%, rgba(5,46,73,0.88) 100%),
+    url('media/img_praxis/4.svg') center center / cover no-repeat;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 100px 20px;
@@ -799,7 +813,11 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 /* ════════════════════════════
    CONTACTO
 ════════════════════════════ */
-.contacto { background: var(--bg); }
+.contacto {
+  background:
+    linear-gradient(rgba(2,26,39,0.88), rgba(2,26,39,0.88)),
+    url('media/img_praxis/2.svg') center top / cover no-repeat;
+}
 
 .contacto-grid {
   display: grid;
