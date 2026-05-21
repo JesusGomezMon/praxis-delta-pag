@@ -117,13 +117,6 @@ const translations = {
     footer_tagline: "Consultoría Empresarial Estratégica",
     footer_copy:    "© 2026 Praxis Delta. Todos los derechos reservados.",
 
-    /* ── ALIADOS & CLIENTES ── */
-    ali_tag:   "Nuestra Red",
-    ali_title: "Aliados y Clientes",
-    ali_lead:  "Empresas que confían en Praxis Delta para crecer.",
-    ali_label: "Aliados",
-    cli_label: "Clientes",
-
     /* ── SCROLL HINT ── */
     scroll_hint: "Scroll",
   },
@@ -241,13 +234,6 @@ const translations = {
     /* ── FOOTER ── */
     footer_tagline: "Strategic Business Consulting",
     footer_copy:    "© 2026 Praxis Delta. All rights reserved.",
-
-    /* ── ALIADOS & CLIENTES ── */
-    ali_tag:   "Our Network",
-    ali_title: "Allies & Clients",
-    ali_lead:  "Companies that trust Praxis Delta to grow.",
-    ali_label: "Allies",
-    cli_label: "Clients",
 
     /* ── SCROLL HINT ── */
     scroll_hint: "Scroll",
