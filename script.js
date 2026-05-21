@@ -72,8 +72,15 @@ applyLanguage(currentLang);
    NAVBAR SCROLL
 ════════════════════════════ */
 const navbar = document.getElementById('navbar');
+function syncMobileMenuOffset() {
+  if (!mobileMenu || !navbar) return;
+  const navHeight = navbar.offsetHeight;
+  mobileMenu.style.top = `${navHeight}px`;
+  mobileMenu.style.height = `calc(100vh - ${navHeight}px)`;
+}
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
+  syncMobileMenuOffset();
 }, { passive: true });
 
 
@@ -84,9 +91,13 @@ const hamburger  = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 const mobLinks   = document.querySelectorAll('.mob-link');
 
+syncMobileMenuOffset();
+window.addEventListener('resize', syncMobileMenuOffset);
+
 hamburger.addEventListener('click', () => {
   const open = mobileMenu.classList.toggle('open');
   hamburger.classList.toggle('open', open);
+  navbar.classList.toggle('menu-open', open);
   document.body.style.overflow = open ? 'hidden' : '';
 });
 
@@ -94,6 +105,7 @@ mobLinks.forEach(link => {
   link.addEventListener('click', () => {
     mobileMenu.classList.remove('open');
     hamburger.classList.remove('open');
+    navbar.classList.remove('menu-open');
     document.body.style.overflow = '';
   });
 });

@@ -189,6 +189,12 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
   padding: 12px 0;
   border-bottom: 1px solid var(--border);
 }
+.navbar.menu-open {
+  background: rgba(6,16,31,0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
 .nav-inner {
   display: flex;
   align-items: center;
@@ -291,13 +297,13 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 /* ── MOBILE MENU ── */
 .mobile-menu {
   position: fixed;
-  top: 0; right: -100%;
+  top: 80px; right: -100%;
   width: min(320px, 80vw);
-  height: 100vh;
+  height: calc(100vh - 80px);
   background: var(--bg-card);
   border-left: 1px solid var(--border);
   z-index: 999;
-  padding: 100px 40px 40px;
+  padding: 36px 40px 40px;
   transition: right 0.4s cubic-bezier(0.16,1,0.3,1);
   display: flex;
   flex-direction: column;
@@ -326,7 +332,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
   padding: 120px 20px 80px;
   background-image: url('media/img_praxis/5.svg');
   background-size: cover;
-  background-position: center center;
+  background-position: center 30%;
   background-repeat: no-repeat;
 }
 
@@ -735,6 +741,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 32px;
+  align-items: stretch;
 }
 
 .equipo-card {
@@ -773,8 +780,8 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 .equipo-photo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  object-fit: contain;
+  object-position: center bottom;
   opacity: 0.9;
   filter: brightness(1.05);
   transition: transform 0.5s ease, opacity 0.3s;
@@ -808,7 +815,7 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 6px;
+  margin-top: auto;
 }
 .equipo-tags span {
   font-size: 0.72rem;
@@ -1077,6 +1084,10 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 @media (max-width: 900px) {
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
+  .mobile-menu {
+    width: 100vw;
+    right: -100vw;
+  }
   .quienes-inner  { grid-template-columns: 1fr; gap: 44px; }
   .contacto-grid  { grid-template-columns: 1fr; gap: 44px; }
   .footer-inner   { grid-template-columns: 1fr 1fr; }
@@ -1085,7 +1096,10 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
 
 @media (max-width: 640px) {
   .section { padding: 68px 0; }
-  .hero { padding: 100px 20px 60px; }
+  .hero {
+    padding: 100px 20px 60px;
+    background-position: 56% 30%;
+  }
   .hero-title { letter-spacing: 0.03em; }
   .hero-actions { flex-direction: column; align-items: center; }
   .hero-scroll-hint { display: none; }
@@ -1093,7 +1107,13 @@ h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); font-weight: 600; }
   .contacto-form { padding: 26px 20px; }
   .footer-inner  { grid-template-columns: 1fr; gap: 28px; }
   .interventions-list { grid-template-columns: 1fr; }
-  .quienes-card  { padding: 28px 22px; }
+  .quienes-text { text-align: center; }
+  .quienes-text .section-tag { margin-inline: auto; }
+  .quienes-text p { text-align: center; }
+  .quienes-card  {
+    padding: 28px 22px;
+    margin-inline: auto;
+  }
   .timeline-line { left: 19px; }
   .ps-dot { width: 40px; height: 40px; }
   .ps-dot span { font-size: 0.9rem; }
