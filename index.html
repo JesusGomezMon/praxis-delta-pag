@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══════════════════════════════════════
+       FAVICON
+  ═══════════════════════════════════════ -->
+  <link rel="icon" type="image/x-icon"   href="media/favicon.ico" />
+  <link rel="shortcut icon"              href="media/favicon.ico" />
+  <link rel="apple-touch-icon"           href="media/favicon.ico" />
+
+  <!-- ═══════════════════════════════════════
+       SEO – PRIMARIO
+  ═══════════════════════════════════════ -->
+  <title>Praxis Delta | Consultoría Empresarial CDMX – Estrategia, Crecimiento y Equipos</title>
+
+  <meta name="description"
+        content="Praxis Delta es una firma de consultoría empresarial en CDMX. Ayudamos a empresas a crecer con planeación estratégica, estructura organizacional y desarrollo de equipos. Sesión exploratoria sin costo." />
+
+  <meta name="keywords"
+        content="consultoría empresarial CDMX, consultoría estratégica México, crecer negocios CDMX, Praxis Delta, planeación estratégica empresas, asesoría empresarial Ciudad de México, crecimiento empresarial, estructura organizacional, desarrollo de equipos, consultoría de negocios México, asesoría financiera empresas, consultor empresarial CDMX, escalar negocio México" />
+
+  <meta name="author"      content="Praxis Delta" />
+  <meta name="robots"      content="index, follow, max-snippet:-1, max-image-preview:large" />
+  <meta name="language"    content="Spanish" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="geo.region"  content="MX-CMX" />
+  <meta name="geo.placename" content="Ciudad de México" />
+
+  <link rel="canonical" href="https://praxisdelta.com/" />
+
+  <!-- ═══════════════════════════════════════
+       OPEN GRAPH (Facebook / LinkedIn / WhatsApp)
+  ═══════════════════════════════════════ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://praxisdelta.com/" />
+  <meta property="og:title"       content="Praxis Delta | Consultoría Empresarial CDMX" />
+  <meta property="og:description" content="Transformamos la estrategia en capacidad empresarial y resultados tangibles. Planeación estratégica, estructura organizacional y desarrollo de equipos en CDMX." />
+  <meta property="og:image"       content="https://praxisdelta.com/media/logo.svg" />
+  <meta property="og:locale"      content="es_MX" />
+  <meta property="og:site_name"   content="Praxis Delta" />
+
+  <!-- ═══════════════════════════════════════
+       TWITTER CARD
+  ═══════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Praxis Delta | Consultoría Empresarial CDMX" />
+  <meta name="twitter:description" content="Ayudamos a empresas a crecer estructurando su estrategia, sistemas y equipos. CDMX · México." />
+  <meta name="twitter:image"       content="https://praxisdelta.com/media/logo.svg" />
+
+  <!-- ═══════════════════════════════════════
+       SCHEMA.ORG – DATOS ESTRUCTURADOS
+       (Google entiende el negocio directamente)
+  ═══════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Praxis Delta",
+    "alternateName": "Consultoría Praxis Delta",
+    "description": "Firma de consultoría estratégica en CDMX que ayuda a empresas a crecer estructurando su estrategia, sistemas organizacionales y equipos.",
+    "url": "https://praxisdelta.com",
+    "logo": "https://praxisdelta.com/media/logo.svg",
+    "image": "https://praxisdelta.com/media/logo.svg",
+    "telephone": ["+52-55-6091-4901", "+52-55-5504-1866"],
+    "email": ["consultora@deltapraxis.com", "propuestas@deltapraxis.com"],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ciudad de México",
+      "addressRegion": "CDMX",
+      "addressCountry": "MX"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "México"
+    },
+    "serviceType": [
+      "Consultoría Empresarial",
+      "Planeación Estratégica",
+      "Estructura Organizacional",
+      "Asesoría Financiera",
+      "Desarrollo de Equipos"
+    ],
+    "knowsAbout": [
+      "Consultoría estratégica",
+      "Crecimiento empresarial",
+      "Planeación estratégica",
+      "Desarrollo organizacional",
+      "Asesoría financiera"
+    ],
+    "priceRange": "$$",
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "sameAs": [
+      "https://praxisdelta.com"
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════
+       FUENTES Y ESTILOS
+  ═══════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+
+      <!-- LOGO -->
+      <a href="#hero" class="nav-logo">
+        <img src="media/logo.svg" alt="Praxis Delta" class="nav-logo-img" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#problema" data-i18n="nav_problema">El Problema</a></li>
+        <li><a href="#metodo"   data-i18n="nav_metodo">Método</a></li>
+        <li><a href="#servicios" data-i18n="nav_servicios">Servicios</a></li>
+        <li><a href="#proceso"  data-i18n="nav_proceso">Proceso</a></li>
+        <li><a href="#contacto" class="nav-cta" data-i18n="nav_contacto">Contáctanos</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <!-- LANGUAGE TOGGLE -->
+        <button class="lang-toggle" id="langToggle" aria-label="Cambiar idioma">
+          <span class="lang-opt" id="langES">ES</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-opt" id="langEN">EN</span>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#problema"  class="mob-link" data-i18n="nav_problema">El Problema</a></li>
+      <li><a href="#metodo"    class="mob-link" data-i18n="nav_metodo">Método</a></li>
+      <li><a href="#servicios" class="mob-link" data-i18n="nav_servicios">Servicios</a></li>
+      <li><a href="#proceso"   class="mob-link" data-i18n="nav_proceso">Proceso</a></li>
+      <li><a href="#contacto"  class="mob-link" data-i18n="nav_contacto">Contáctanos</a></li>
+    </ul>
+    <button class="lang-toggle lang-toggle-mob" id="langToggleMob" aria-label="Cambiar idioma">
+      <span class="lang-opt" id="langESMob">ES</span>
+      <span class="lang-sep">|</span>
+      <span class="lang-opt" id="langENMob">EN</span>
+    </button>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-gradient"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal" data-i18n="hero_badge">CONSULTORÍA EMPRESARIAL</div>
+
+      <div class="hero-logo-large reveal-up">
+        <img src="media/logo.svg" alt="Praxis Delta" class="hero-logo-img" />
+      </div>
+
+      <p class="hero-sub reveal-up delay-1" data-i18n="hero_sub">
+        Transformamos la estrategia en capacidad empresarial y resultados tangibles
+      </p>
+
+      <div class="hero-actions reveal-up delay-2">
+        <a href="https://api.whatsapp.com/send?phone=5560914901&text=Hola%20Praxis%20Delta,%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20exploratoria%20sin%20costo%20para%20mi%20empresa.%20%20Mi%20nombre%20es"
+           target="_blank" class="btn btn-primary" data-i18n="hero_cta">
+          Sesión exploratoria sin costo
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#metodo" class="btn btn-ghost" data-i18n="hero_ver">Ver método</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span data-i18n="scroll_hint">Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEMA -->
+  <section class="section problema" id="problema">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-tag" data-i18n="prob_tag">El desafío real</span>
+        <h2 data-i18n="prob_title">Muchas empresas trabajan mucho… pero no crecen al ritmo que podrían</h2>
+        <p class="section-lead" data-i18n-html="prob_lead"></p>
+      </div>
+
+      <div class="problems-grid">
+        <div class="problem-card reveal-card" data-delay="0">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          </div>
+          <h3 data-i18n="prob_c1_title">Decisiones basadas en intuición</h3>
+          <p  data-i18n="prob_c1_text">Más que en estrategia sólida y datos confiables.</p>
+        </div>
+        <div class="problem-card reveal-card" data-delay="100">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3 data-i18n="prob_c2_title">Procesos internos poco claros</h3>
+          <p  data-i18n="prob_c2_text">Sin estructura definida que soporte la operación diaria.</p>
+        </div>
+        <div class="problem-card reveal-card" data-delay="200">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-i18n="prob_c3_title">Áreas desconectadas</h3>
+          <p  data-i18n="prob_c3_text">Equipos desarticulados que no trabajan hacia un mismo objetivo.</p>
+        </div>
+        <div class="problem-card reveal-card" data-delay="300">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          </div>
+          <h3 data-i18n="prob_c4_title">Crecimiento estancado</h3>
+          <p  data-i18n="prob_c4_text">A pesar del esfuerzo, los resultados no se consolidan.</p>
+        </div>
+        <div class="problem-card reveal-card" data-delay="400">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <h3 data-i18n="prob_c5_title">Dependencia excesiva del dueño</h3>
+          <p  data-i18n="prob_c5_text">La empresa no puede funcionar sin la presencia constante del líder.</p>
+        </div>
+        <div class="problem-card reveal-card" data-delay="500">
+          <div class="card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+          </div>
+          <h3 data-i18n="prob_c6_title">Equipos comerciales sin estructura</h3>
+          <p  data-i18n="prob_c6_text">Sin metodología clara para vender y escalar ingresos.</p>
+        </div>
+      </div>
+
+      <div class="problema-cta reveal-up">
+        <a href="https://api.whatsapp.com/send?phone=5560914901&text=Hola%20Praxis%20Delta,%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20exploratoria%20sin%20costo%20para%20mi%20empresa.%20%20Mi%20nombre%20es"
+           target="_blank" class="btn btn-primary" data-i18n="prob_cta">
+          Solicita sesión exploratoria sin costo
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="section quienes" id="quienes">
+    <div class="container quienes-inner">
+      <div class="quienes-text reveal-up">
+        <span class="section-tag" data-i18n="qui_tag">Quiénes somos</span>
+        <h2 data-i18n="qui_title">Somos una firma de consultoría estratégica</h2>
+        <p data-i18n-html="qui_p1"></p>
+        <p data-i18n-html="qui_p2"></p>
+      </div>
+      <div class="quienes-visual reveal-up delay-1">
+        <div class="quienes-card">
+          <div class="qc-item">
+            <div class="qc-num-wrap">
+              <span class="qc-num" data-target="3">0</span>
+            </div>
+            <span class="qc-label" data-i18n="qui_stat1">Intervenciones clave</span>
+          </div>
+          <div class="qc-divider"></div>
+          <div class="qc-item">
+            <div class="qc-num-wrap">
+              <span class="qc-num" data-target="100">0</span><span class="qc-plus">%</span>
+            </div>
+            <span class="qc-label" data-i18n="qui_stat2">Enfoque en implementación</span>
+          </div>
+          <div class="qc-divider"></div>
+          <div class="qc-item">
+            <div class="qc-num-wrap">
+              <span class="qc-num" data-target="360">0</span><span class="qc-plus">°</span>
+            </div>
+            <span class="qc-label" data-i18n="qui_stat3">Visión estratégica</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO -->
+  <section class="section metodo" id="metodo">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-tag" data-i18n="met_tag">Cómo trabajamos</span>
+        <h2 data-i18n="met_title">El Método Praxis</h2>
+        <p class="section-lead" data-i18n="met_lead">Lo hacemos mediante tres intervenciones clave dentro de la empresa:</p>
+      </div>
+
+      <div class="metodo-steps">
+        <div class="metodo-step reveal-left">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3 data-i18n="met_s1_title">Diagnóstico Estratégico</h3>
+            <p  data-i18n="met_s1_text">Análisis profundo de la empresa, su modelo de negocio, sus procesos y su capacidad organizacional.</p>
+          </div>
+        </div>
+        <div class="metodo-step reveal-right">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3 data-i18n="met_s2_title">Diseño de Soluciones</h3>
+            <p  data-i18n="met_s2_text">Construcción de estrategias y modelos de trabajo adaptados a la realidad del negocio.</p>
+          </div>
+        </div>
+        <div class="metodo-step reveal-left">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3 data-i18n="met_s3_title">Implementación y Desarrollo del Equipo</h3>
+            <p  data-i18n="met_s3_text">Acompañamiento en la ejecución de la estrategia y desarrollo de las capacidades del equipo para sostener el crecimiento.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="metodo-interventions reveal-up">
+        <h3 class="interventions-title" data-i18n="met_int_title">En Praxis convertimos la estrategia en resultados reales</h3>
+        <div class="interventions-list">
+          <div class="intervention">
+            <span class="int-num">1</span>
+            <p data-i18n="met_int1">Diseñamos la estrategia del negocio</p>
+          </div>
+          <div class="intervention">
+            <span class="int-num">2</span>
+            <p data-i18n="met_int2">Estructuramos los sistemas que sostienen el crecimiento</p>
+          </div>
+          <div class="intervention">
+            <span class="int-num">3</span>
+            <p data-i18n="met_int3">Desarrollamos al equipo para ejecutar la estrategia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section servicios" id="servicios">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-tag" data-i18n="serv_tag">Lo que hacemos</span>
+        <h2 data-i18n="serv_title">Nuestros Servicios</h2>
+      </div>
+      <div class="servicios-grid">
+        <div class="servicio-card reveal-card" data-delay="0">
+          <div class="serv-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3 data-i18n="serv_1_title">Planeación Estratégica y Dirección Empresarial</h3>
+          <p  data-i18n="serv_1_text">Definimos el rumbo del negocio con claridad, estableciendo metas, prioridades y el camino para alcanzarlas.</p>
+        </div>
+        <div class="servicio-card reveal-card" data-delay="150">
+          <div class="serv-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+          </div>
+          <h3 data-i18n="serv_2_title">Estructura Organizacional, Comercial u Operativa</h3>
+          <p  data-i18n="serv_2_text">Diseñamos sistemas y estructuras que permiten a la empresa operar con eficiencia y escalar sostenidamente.</p>
+        </div>
+        <div class="servicio-card reveal-card" data-delay="300">
+          <div class="serv-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 data-i18n="serv_3_title">Asesoría Financiera</h3>
+          <p  data-i18n="serv_3_text">Fortalecemos la gestión financiera de la empresa para tomar decisiones informadas y proteger la rentabilidad.</p>
+        </div>
+        <div class="servicio-card reveal-card" data-delay="450">
+          <div class="serv-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-i18n="serv_4_title">Desarrollo y Activación de Equipos</h3>
+          <p  data-i18n="serv_4_text">Potenciamos las capacidades del equipo humano para que puedan ejecutar la estrategia con alto rendimiento.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="section proceso" id="proceso">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-tag" data-i18n="proc_tag">Cómo lo hacemos</span>
+        <h2 data-i18n="proc_title">Nuestro Proceso</h2>
+      </div>
+      <div class="proceso-timeline">
+        <div class="timeline-line"></div>
+        <div class="proceso-step reveal-up" data-delay="0">
+          <div class="ps-dot"><span>1</span></div>
+          <div class="ps-content">
+            <h3 data-i18n="proc_1_title">Análisis y Diagnóstico</h3>
+            <p  data-i18n="proc_1_text">Estudio profundo de las necesidades del cliente para identificar áreas de oportunidad y optimización. Evaluación detallada de los procesos comerciales, estructurales y operativos de la empresa.</p>
+          </div>
+        </div>
+        <div class="proceso-step reveal-up" data-delay="150">
+          <div class="ps-dot"><span>2</span></div>
+          <div class="ps-content">
+            <h3 data-i18n="proc_2_title">Ideas y Soluciones</h3>
+            <p  data-i18n="proc_2_text">Generación de soluciones innovadoras y estrategias personalizadas basadas en el análisis y diagnóstico previos.</p>
+          </div>
+        </div>
+        <div class="proceso-step reveal-up" data-delay="300">
+          <div class="ps-dot"><span>3</span></div>
+          <div class="ps-content">
+            <h3 data-i18n="proc_3_title">Entrenamiento Estratégico</h3>
+            <p  data-i18n="proc_3_text">Implementación de entrenamientos disruptivos o planes de acción específicos para mejorar el rendimiento y alcanzar objetivos.</p>
+          </div>
+        </div>
+        <div class="proceso-step reveal-up" data-delay="450">
+          <div class="ps-dot"><span>4</span></div>
+          <div class="ps-content">
+            <h3 data-i18n="proc_4_title">Resultados</h3>
+            <p  data-i18n="proc_4_text">Medición de impacto y ajuste de estrategias para asegurar un crecimiento continuo y sostenible en la organización.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner reveal-up">
+    <div class="cta-bg-orb"></div>
+    <div class="container">
+      <h2 data-i18n="cta_title">Muchas empresas tienen el potencial para crecer</h2>
+      <p data-i18n-html="cta_text"></p>
+      <a href="https://api.whatsapp.com/send?phone=5560914901&text=Hola%20Praxis%20Delta,%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20exploratoria%20sin%20costo%20para%20mi%20empresa.%20%20Mi%20nombre%20es"
+         target="_blank" class="btn btn-primary btn-lg" data-i18n="cta_btn">
+        Agenda tu sesión exploratoria
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section contacto" id="contacto">
+    <div class="container">
+      <div class="section-intro reveal-up">
+        <span class="section-tag" data-i18n="con_tag">Hablemos</span>
+        <h2 data-i18n="con_title">Contáctanos</h2>
+        <p class="section-lead" data-i18n="con_lead">Estamos listos para acompañarte en el siguiente nivel de tu empresa.</p>
+      </div>
+      <div class="contacto-grid">
+        <div class="contacto-info reveal-left">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.84a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label" data-i18n="con_phone">Teléfono / WhatsApp</span>
+              <a href="tel:+525560914901" class="contact-value">(+52) 55 6091 4901</a>
+              <a href="tel:+525555041866" class="contact-value">(+52) 55 5504 1866</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <span class="contact-label" data-i18n="con_email">Correos</span>
+              <a href="mailto:consultora@deltapraxis.com" class="contact-value">consultora@deltapraxis.com</a>
+              <a href="mailto:propuestas@deltapraxis.com" class="contact-value">propuestas@deltapraxis.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <span class="contact-label" data-i18n="con_wa">WhatsApp Directo</span>
+              <a href="https://api.whatsapp.com/send?phone=5560914901&text=Hola%20Praxis%20Delta,%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20exploratoria%20sin%20costo%20para%20mi%20empresa.%20%20Mi%20nombre%20es"
+                 target="_blank" class="contact-value" data-i18n="con_wa_link">Iniciar conversación →</a>
+            </div>
+          </div>
+        </div>
+
+        <form class="contacto-form reveal-right" id="contactForm">
+          <div class="form-group">
+            <label for="nombre" data-i18n="con_f_name">Nombre</label>
+            <input type="text" id="nombre" data-i18n-ph="con_f_ph_name" placeholder="Tu nombre completo" required />
+          </div>
+          <div class="form-group">
+            <label for="empresa" data-i18n="con_f_company">Empresa</label>
+            <input type="text" id="empresa" data-i18n-ph="con_f_ph_company" placeholder="Nombre de tu empresa" />
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="con_f_email">Correo electrónico</label>
+            <input type="email" id="email" data-i18n-ph="con_f_ph_email" placeholder="correo@empresa.com" required />
+          </div>
+          <div class="form-group">
+            <label for="mensaje" data-i18n="con_f_msg">¿Cómo podemos ayudarte?</label>
+            <textarea id="mensaje" rows="4" data-i18n-ph="con_f_ph_msg" placeholder="Cuéntanos brevemente el reto de tu empresa..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <span data-i18n="con_f_btn">Enviar mensaje</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="media/logo.svg" alt="Praxis Delta" class="footer-logo-img" />
+        </div>
+        <p data-i18n="footer_tagline">Consultoría Empresarial Estratégica</p>
+      </div>
+      <div class="footer-links">
+        <a href="#problema" data-i18n="nav_problema">El Problema</a>
+        <a href="#metodo"   data-i18n="nav_metodo">Método</a>
+        <a href="#servicios" data-i18n="nav_servicios">Servicios</a>
+        <a href="#proceso"  data-i18n="nav_proceso">Proceso</a>
+        <a href="#contacto" data-i18n="nav_contacto">Contáctanos</a>
+      </div>
+      <div class="footer-contact">
+        <p>consultora@deltapraxis.com</p>
+        <p>(+52) 55 6091 4901</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p data-i18n="footer_copy">© 2026 Praxis Delta. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://api.whatsapp.com/send?phone=5560914901&text=Hola%20Praxis%20Delta,%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20exploratoria%20sin%20costo%20para%20mi%20empresa.%20%20Mi%20nombre%20es"
+     target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
