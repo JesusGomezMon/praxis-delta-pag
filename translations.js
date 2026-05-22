@@ -132,6 +132,14 @@ const translations = {
     eq_tag_estrategia:"Alianzas Estratégicas",
     eq_tag_networking:"Networking",
 
+    /* ── SOCIAL PROOF / TESTIMONIOS ── */
+    sp_title: "Empresas que han confiado en nosotros",
+    tes_tag: "Testimonios",
+    tes_title: "Lo que dicen nuestros clientes",
+    tes_1: "“El acompañamiento fue claro, práctico y orientado a resultados. Logramos alinear al equipo y ejecutar con mayor enfoque.”",
+    tes_2: "“Nos ayudaron a estructurar procesos y mejorar la colaboración entre áreas. El impacto se notó desde las primeras semanas.”",
+    tes_3: "“La metodología combinó estrategia y ejecución real. Hoy tenemos mayor claridad para crecer de forma sostenible.”",
+
     /* ── SCROLL HINT ── */
     scroll_hint: "Scroll",
   },
@@ -264,6 +272,14 @@ const translations = {
     eq_tag_finanzas:  "Financial Consulting",
     eq_tag_estrategia:"Strategic Alliances",
     eq_tag_networking:"Networking",
+
+    /* ── SOCIAL PROOF / TESTIMONIOS ── */
+    sp_title: "Companies that have trusted us",
+    tes_tag: "Testimonials",
+    tes_title: "What our clients say",
+    tes_1: "\"Their support was clear, practical, and results-driven. We aligned our team and executed with greater focus.\"",
+    tes_2: "\"They helped us structure processes and improve cross-functional collaboration. The impact was visible within weeks.\"",
+    tes_3: "\"The methodology combined strategy with real execution. Today we have much more clarity to grow sustainably.\"",
 
     /* ── SCROLL HINT ── */
     scroll_hint: "Scroll",

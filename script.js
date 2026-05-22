@@ -152,22 +152,27 @@ function animateCounter(el, target) {
   requestAnimationFrame(tick);
 }
 
-const counterObserver = new IntersectionObserver(
-  entries => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el     = entry.target;
-      const target = parseInt(el.dataset.target);
-      animateCounter(el, target);
-      counterObserver.unobserve(el);
-    });
-  },
-  { threshold: 0.5 }
-);
+const quienesSection = document.getElementById('quienes');
+const quienesCounters = document.querySelectorAll('#quienes [data-target]');
 
-document.querySelectorAll('[data-target]').forEach(el => {
-  counterObserver.observe(el);
-});
+if (quienesSection && quienesCounters.length) {
+  const counterObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        quienesCounters.forEach(el => {
+          const target = parseInt(el.dataset.target, 10);
+          if (Number.isNaN(target)) return;
+          animateCounter(el, target);
+        });
+        counterObserver.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.35 }
+  );
+
+  counterObserver.observe(quienesSection);
+}
 
 
 /* ════════════════════════════
