@@ -114,7 +114,7 @@
 
       <!-- LOGO -->
       <a href="#hero" class="nav-logo">
-        <img src="media/logo.svg" alt="Praxis Delta" class="nav-logo-img" />
+        <img src="media/logo.svg" alt="Praxis Delta" class="nav-logo-img" id="navLogoImg" />
       </a>
 
       <ul class="nav-links">
@@ -131,6 +131,11 @@
           <span class="lang-opt" id="langES">ES</span>
           <span class="lang-sep">|</span>
           <span class="lang-opt" id="langEN">EN</span>
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+          <span id="themeIcon" aria-hidden="true">
+            <img id="themeIconImg" src="https://img.icons8.com/fluency/48/crescent-moon.png" alt="Modo oscuro" />
+          </span>
         </button>
         <button class="nav-hamburger" id="hamburger" aria-label="Menú">
           <span></span><span></span><span></span>
@@ -300,7 +305,7 @@
         <!-- VIVI CEPEDA -->
         <div class="equipo-card reveal-left">
           <div class="equipo-photo">
-            <img src="media/img_praxis/3.svg" alt="Vivi Cepeda" />
+            <img src="media/img_praxis/vivi1.png" alt="Vivi Cepeda" />
           </div>
           <div class="equipo-info">
             <h3>Vivi Cepeda</h3>
@@ -321,14 +326,14 @@
         <!-- JOSE OLIVERA -->
         <div class="equipo-card reveal-right">
           <div class="equipo-photo">
-            <img src="media/img_praxis/4.svg" alt="Jose Olivera" />
+            <img src="media/img_praxis/jose1.png" alt="Jose Olivera" class="equipo-photo-jose" ;" />
           </div>
           <div class="equipo-info">
             <h3>Jose Olivera</h3>
             <span class="equipo-role" data-i18n="eq_jose_role">Socio Director</span>
             <p data-i18n="eq_jose_bio">Lic. en Administración de Negocios Internacionales – Anáhuac. Maestría en Alta Dirección. Especialidad en Negociación por Harvard. 13+ años en desarrollo de negocios colaborativos, consultoría financiera y networking. Socio director en LOSOLI Consultores.</p>
             <div class="equipo-tags">
-              <span data-i18n="eq_tag_finanzas">Consultoría Financiera</span>
+              <span data-i18n="eq_ddag_finanzas">Consultoría Financiera</span>
               <span data-i18n="eq_tag_estrategia">Alianzas Estratégicas</span>
               <span data-i18n="eq_tag_networking">Networking</span>
             </div>
@@ -452,36 +457,37 @@
           <div class="testimonio-head">
             <div class="testimonio-avatar" aria-hidden="true">R.M.</div>
             <div>
-              <h3>Ricardo M.</h3>
-              <p class="testimonio-role">Director General</p>
+              <h3>GABRIELA H.</h3>
+              <p class="testimonio-role"> Coordinador Administrativo</p>
               <p class="testimonio-company">Empresa sector retail, CDMX</p>
             </div>
           </div>
-          <p class="testimonio-text">"[Reemplazar con recomendación real de LinkedIn]"</p>
+          <p class="testimonio-text">"Trabajar junto a Viviana Cepeda está siendo una experiencia enriquecedora. Su liderazgo combina visión estratégica, dirección clara y un compromiso inquebrantable con el crecimiento de la empresa y sus colaboradores."</p>
         </article>
 
         <article class="testimonio-card reveal-card" data-delay="120">
           <div class="testimonio-head">
             <div class="testimonio-avatar" aria-hidden="true">A.G.</div>
             <div>
-              <h3>Andrea G.</h3>
-              <p class="testimonio-role">Fundadora</p>
-              <p class="testimonio-company">Startup tecnología, CDMX</p>
+              <h3>Carlos Ruiz</h3>
+              <p class="testimonio-role">Socio, CEO</p>
+              <p class="testimonio-company">Startup tecnología (Tecnetia), CDMX</p>
             </div>
           </div>
-          <p class="testimonio-text">"[Reemplazar con recomendación real de LinkedIn]"</p>
+          <p class="testimonio-text">"Desde que los conozco solo puedo decir que me han sorprendido gratamente las habilidades que tiene desarrollando negocios y el talento de los demás. Son muy prácticos pero siempre se apegan a técnicas o buenas prácticas"</p>
         </article>
 
         <article class="testimonio-card reveal-card" data-delay="240">
           <div class="testimonio-head">
             <div class="testimonio-avatar" aria-hidden="true">C.V.</div>
             <div>
-              <h3>Carlos V.</h3>
-              <p class="testimonio-role">Director Comercial</p>
+              <h3>
+                Marco Alejandro Delgado Romero</h3>
+              <p class="testimonio-role">Coordinador de contenidos</p>
               <p class="testimonio-company">Empresa servicios, Ciudad de México</p>
             </div>
           </div>
-          <p class="testimonio-text">"[Reemplazar con recomendación real de LinkedIn]"</p>
+          <p class="testimonio-text">"Recomiendo Ampliamente a Viviana Cepeda porque tiene los conocimientos y un grande corazón para acompañar y asesorar a las personas para que puedan sacar adelante su empresa o emprendimiento fortaleciendo una planeación estratégica y comercial a la medida y necesidad de cada quien."</p>
         </article>
       </div>
     </div>
@@ -656,7 +662,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <div class="footer-logo">
-          <img src="media/logo.svg" alt="Praxis Delta" class="footer-logo-img" />
+          <img src="media/logoazu.svg" alt="Praxis Delta" class="footer-logo-img" />
         </div>
         <p data-i18n="footer_tagline">Consultoría Empresarial Estratégica</p>
       </div>

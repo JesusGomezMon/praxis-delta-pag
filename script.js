@@ -6,6 +6,7 @@
    LANGUAGE SYSTEM
 ════════════════════════════ */
 let currentLang = localStorage.getItem('pd_lang') || 'es';
+let currentTheme = localStorage.getItem('pd_theme') || 'dark';
 
 function applyLanguage(lang) {
   currentLang = lang;
@@ -66,6 +67,36 @@ function toggleLanguage() {
 
 /* init on load */
 applyLanguage(currentLang);
+
+/* ════════════════════════════
+   THEME TOGGLE (DARK / LIGHT)
+════════════════════════════ */
+const themeToggle = document.getElementById('themeToggle');
+const themeIconImg = document.getElementById('themeIconImg');
+const navLogoImg = document.getElementById('navLogoImg');
+
+function applyTheme(theme) {
+  currentTheme = theme;
+  localStorage.setItem('pd_theme', theme);
+  document.body.classList.toggle('light-theme', theme === 'light');
+  if (navLogoImg) {
+    navLogoImg.src = theme === 'light' ? 'media/logoazu.svg' : 'media/logo.svg';
+  }
+  if (themeIconImg) {
+    themeIconImg.src = theme === 'light'
+      ? 'https://img.icons8.com/fluency/48/sun.png'
+      : 'https://img.icons8.com/fluency/48/crescent-moon.png';
+    themeIconImg.alt = theme === 'light' ? 'Modo claro' : 'Modo oscuro';
+  }
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+  });
+}
+
+applyTheme(currentTheme);
 
 
 /* ════════════════════════════
