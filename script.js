@@ -74,6 +74,7 @@ applyLanguage(currentLang);
 const themeToggle = document.getElementById('themeToggle');
 const themeIconImg = document.getElementById('themeIconImg');
 const navLogoImg = document.getElementById('navLogoImg');
+const footerLogoImg = document.getElementById('footerLogoImg');
 
 function applyTheme(theme) {
   currentTheme = theme;
@@ -81,6 +82,9 @@ function applyTheme(theme) {
   document.body.classList.toggle('light-theme', theme === 'light');
   if (navLogoImg) {
     navLogoImg.src = theme === 'light' ? 'media/logoazu.svg' : 'media/logo.svg';
+  }
+  if (footerLogoImg) {
+    footerLogoImg.src = theme === 'light' ? 'media/logoazu.svg' : 'media/logo.svg';
   }
   if (themeIconImg) {
     themeIconImg.src = theme === 'light'
