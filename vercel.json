@@ -1,0 +1,7 @@
+{
+  "redirects": [
+    { "source": "/planeacion2027", "destination": "/planeacion-2027/", "permanent": true },
+    { "source": "/planeacion2027/", "destination": "/planeacion-2027/", "permanent": true },
+    { "source": "/planeacion-2027", "destination": "/planeacion-2027/", "permanent": true }
+  ]
+}
