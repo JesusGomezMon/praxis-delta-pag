@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Planeación 2027 | Praxis Delta</title>
+  <meta name="description" content="Planeación estratégica 2027 con el Método DELTA: para que el esfuerzo de tu empresa por fin se note en tus números." />
+
+  <!-- Página oculta: solo accesible por link directo, no se indexa en buscadores -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="googlebot" content="noindex, nofollow" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Planeación 2027 | Praxis Delta" />
+  <meta property="og:description" content="Que el esfuerzo de tu empresa por fin se note en tus números. Agenda tu diagnóstico de 30 minutos." />
+  <meta property="og:image"       content="https://praxisdelta.com/media/img_praxis/vivi2.png" />
+  <meta property="og:locale"      content="es_MX" />
+  <meta property="og:site_name"   content="Praxis Delta" />
+
+  <link rel="icon" type="image/x-icon" href="/media/favicon.ico" />
+  <link rel="apple-touch-icon"         href="/media/favicon.ico" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <style>
+    /* ── Estilos propios de Planeación 2027 (sobre la base de styles.css) ── */
+    [hidden] { display: none !important; }
+    .pl-section-head { max-width: 760px; margin-bottom: 48px; }
+    .pl-section-head h2 { margin-bottom: 16px; }
+    .pl-section-head.center { margin-inline: auto; text-align: center; }
+
+    /* HERO */
+    .pl-hero { text-align: left; min-height: auto; padding: 150px 0 110px; }
+    .pl-hero-shade {
+      position: absolute; inset: 0;
+      background: linear-gradient(90deg,
+        color-mix(in srgb, var(--bg) 94%, transparent) 0%,
+        color-mix(in srgb, var(--bg) 82%, transparent) 50%,
+        color-mix(in srgb, var(--bg) 55%, transparent) 100%);
+    }
+    @media (max-width: 900px) {
+      .pl-hero-shade { background: color-mix(in srgb, var(--bg) 88%, transparent); }
+    }
+    .pl-hero-inner {
+      position: relative; z-index: 1;
+      width: min(1200px, 92vw); margin-inline: auto;
+      display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 64px; align-items: center;
+    }
+    .pl-hero h1 {
+      font-size: clamp(2.3rem, 5vw, 3.6rem); font-weight: 700;
+      line-height: 1.08; margin-bottom: 24px;
+    }
+    .pl-hero h1 em {
+      font-style: normal; color: transparent;
+      background: linear-gradient(135deg, var(--teal-lite), var(--teal-mid));
+      -webkit-background-clip: text; background-clip: text;
+    }
+    .pl-hero .hero-sub { margin-inline: 0; max-width: 600px; margin-bottom: 36px; color: var(--text); }
+    .pl-hero .hero-actions { justify-content: flex-start; margin-inline: 0; }
+    .pl-hero-note { margin-top: 22px; font-size: 0.9rem; color: var(--muted); }
+    .pl-hero-photo {
+      position: relative; border-radius: 24px; overflow: hidden;
+      border: 1px solid var(--border); box-shadow: var(--shadow);
+      aspect-ratio: 4 / 5; max-width: 460px; justify-self: center; width: 100%;
+    }
+    .pl-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 25%; }
+    .pl-hero-photo figcaption {
+      position: absolute; left: 16px; right: 16px; bottom: 16px;
+      background: rgba(7,49,74,0.82); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(89,205,221,0.25); border-radius: 14px;
+      padding: 14px 18px; color: #f4fbff; font-size: 0.88rem;
+    }
+    .pl-hero-photo figcaption strong { display: block; font-family: 'Space Grotesk', sans-serif; font-size: 1.02rem; }
+    .pl-hero-photo figcaption span { color: #b5d2de; }
+
+    /* DOLORES */
+    #dolores .problems-grid { grid-template-columns: repeat(3, 1fr); }
+    .pl-plan .btn-ghost, .pl-agenda .btn-ghost { border-color: color-mix(in srgb, var(--teal-lite) 55%, transparent); }
+    .pl-pain-card h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .pl-pain-card p  { font-size: 0.93rem; }
+    .pl-band {
+      background: linear-gradient(135deg, #031f30 0%, #052e49 100%);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 28px 32px; display: flex; flex-wrap: wrap; align-items: center;
+      justify-content: space-between; gap: 18px;
+    }
+    .pl-band p { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.3rem; color: #f4fbff; }
+
+    /* MÉTODO DELTA */
+    .pl-delta-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-bottom: 40px; }
+    .pl-delta-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 26px 22px; display: flex; flex-direction: column; gap: 10px;
+      transition: var(--transition);
+    }
+    .pl-delta-card:hover { border-color: var(--teal-mid); transform: translateY(-6px); box-shadow: 0 20px 56px rgba(0,0,0,0.35); }
+    .pl-delta-letter {
+      font-family: 'Space Grotesk', sans-serif; font-weight: 800; font-size: 3rem; line-height: 1;
+      color: transparent; background: linear-gradient(135deg, var(--teal-lite), var(--teal-mid));
+      -webkit-background-clip: text; background-clip: text;
+    }
+    .pl-delta-card h3 { font-size: 1.05rem; }
+    .pl-delta-q { color: var(--text); font-size: 0.92rem; line-height: 1.6; }
+    .pl-delta-d { color: var(--muted); font-size: 0.88rem; line-height: 1.6; }
+
+    .pl-diff {
+      background: linear-gradient(135deg, #031f30 0%, #052e49 100%);
+      border: 1px solid var(--border); border-radius: 22px;
+      padding: 48px 44px; position: relative; overflow: hidden;
+    }
+    .pl-diff::before {
+      content: ''; position: absolute; width: 520px; height: 520px; right: -160px; top: -200px;
+      background: radial-gradient(circle, rgba(61,189,206,0.22), transparent 65%); border-radius: 50%;
+      pointer-events: none;
+    }
+    .pl-diff > * { position: relative; }
+    .pl-diff h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 700; color: #f4fbff; max-width: 880px; margin: 6px 0 18px; }
+    .pl-diff p { color: #cfe8f4; font-size: 1.05rem; line-height: 1.75; max-width: 880px; }
+    .pl-chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+    .pl-chips span {
+      background: rgba(34,142,161,0.16); border: 1px solid rgba(89,205,221,0.35); color: #f4fbff;
+      font-size: 0.88rem; font-weight: 500; padding: 9px 16px; border-radius: 50px;
+    }
+
+    /* OPCIONES */
+    .pl-plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; align-items: stretch; margin-bottom: 24px; }
+    .pl-plan {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 34px 30px; display: flex; flex-direction: column; gap: 16px; transition: var(--transition);
+    }
+    .pl-plan:hover { transform: translateY(-6px); box-shadow: 0 20px 56px rgba(0,0,0,0.35); }
+    .pl-plan-kicker { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-lite); }
+    .pl-plan h3 { font-size: 1.8rem; font-weight: 700; }
+    .pl-plan > p { color: var(--muted); font-size: 0.95rem; line-height: 1.65; }
+    .pl-plan ul { display: flex; flex-direction: column; gap: 10px; }
+    .pl-plan li { position: relative; padding-left: 26px; color: var(--text); font-size: 0.92rem; line-height: 1.55; }
+    .pl-plan li::before {
+      content: ''; position: absolute; left: 0; top: 0.45em; width: 14px; height: 8px;
+      border-left: 2px solid var(--teal-lite); border-bottom: 2px solid var(--teal-lite); transform: rotate(-45deg);
+    }
+    .pl-plan .btn { margin-top: auto; justify-content: center; }
+    .pl-plan-time { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.1rem; color: var(--white); }
+    .pl-plan.featured {
+      background: linear-gradient(160deg, #0b4a68 0%, #07314a 100%);
+      border-color: rgba(89,205,221,0.55); box-shadow: 0 0 0 1px rgba(89,205,221,0.25), 0 20px 56px rgba(0,0,0,0.35);
+    }
+    .pl-plan.featured h3 { color: #f4fbff; }
+    .pl-plan.featured > p { color: #cfe8f4; }
+    .pl-plan.featured li { color: #f4fbff; }
+    .pl-plan.featured .pl-plan-kicker { color: #59cddd; }
+    .pl-plan.featured li::before { border-color: #59cddd; }
+    .pl-plan-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+    .pl-badge {
+      background: linear-gradient(135deg, #59cddd, #2ea4ba); color: #07314a;
+      font-size: 0.75rem; font-weight: 700; padding: 5px 12px; border-radius: 50px;
+    }
+    .pl-pulso {
+      background: var(--teal-dim); border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 24px 28px; margin-bottom: 20px;
+    }
+    .pl-pulso h3 { font-size: 1.2rem; margin-bottom: 6px; }
+    .pl-pulso p { color: var(--text); font-size: 0.95rem; }
+    .pl-help { color: var(--muted); font-size: 0.98rem; }
+
+    /* QUIÉN */
+    .pl-who { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 64px; align-items: center; }
+    .pl-who-photo {
+      border-radius: 24px; overflow: hidden; border: 1px solid var(--border); box-shadow: var(--shadow);
+      aspect-ratio: 4 / 5; max-width: 400px; width: 100%; justify-self: center;
+    }
+    .pl-who-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 20%; }
+    .pl-who h2 { font-size: clamp(1.8rem, 3.4vw, 2.5rem); margin-bottom: 20px; }
+    .pl-who p { color: var(--muted); font-size: 1.02rem; line-height: 1.75; margin-bottom: 16px; }
+
+    /* FAQ */
+    .pl-faq { max-width: 860px; margin-inline: auto; }
+    .pl-faq details { border-top: 1px solid var(--border); }
+    .pl-faq details:last-child { border-bottom: 1px solid var(--border); }
+    .pl-faq summary {
+      list-style: none; cursor: pointer; padding: 22px 40px 22px 0; position: relative;
+      font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 1.1rem; color: var(--white);
+    }
+    .pl-faq summary::-webkit-details-marker { display: none; }
+    .pl-faq summary::after {
+      content: '+'; position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+      font-size: 1.6rem; font-weight: 400; color: var(--teal-lite); transition: transform 0.3s;
+    }
+    .pl-faq details[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+    .pl-faq details p { color: var(--muted); font-size: 0.98rem; line-height: 1.7; padding: 0 0 24px; }
+
+    /* AGENDA + LIENZO */
+    .pl-agenda { text-align: left; }
+    .pl-agenda-inner {
+      position: relative; z-index: 1; width: min(1200px, 92vw); margin-inline: auto;
+      display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 56px; align-items: start;
+    }
+    .pl-agenda h2 { margin-bottom: 20px; }
+    .pl-agenda p.pl-lead { color: #cfe8f4; font-size: 1.08rem; line-height: 1.75; margin-bottom: 32px; }
+    .pl-agenda .hero-actions { justify-content: flex-start; margin-inline: 0; }
+    .pl-agenda .btn-ghost { color: #f4fbff; border-color: rgba(143,181,197,0.5); }
+    .pl-agenda-note { margin-top: 18px; font-size: 0.9rem; color: #b5d2de; }
+    .pl-lienzo.contacto-form { gap: 14px; }
+    .pl-lienzo h3 { font-size: 1.35rem; }
+    .pl-lienzo > p { color: var(--muted); font-size: 0.93rem; line-height: 1.65; }
+    .pl-error { color: #ff8a93; font-size: 0.86rem; }
+    body.light-theme .pl-error { color: #a3262e; }
+    .pl-lienzo .form-success { text-align: left; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+
+    /* Botones sobre fondos siempre oscuros */
+    .pl-on-dark .btn-ghost { color: #f4fbff; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1080px) {
+      .pl-delta-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 900px) {
+      .pl-hero-inner, .pl-who, .pl-agenda-inner { grid-template-columns: 1fr; gap: 44px; }
+      .pl-plans { grid-template-columns: 1fr; }
+      #dolores .problems-grid { grid-template-columns: repeat(2, 1fr); }
+      .pl-delta-grid { grid-template-columns: repeat(2, 1fr); }
+      .pl-hero-photo { max-width: 420px; }
+    }
+    @media (max-width: 640px) {
+      .pl-hero { padding: 120px 0 72px; }
+      .pl-hero .hero-actions, .pl-agenda .hero-actions { flex-direction: column; align-items: stretch; }
+      .pl-hero .btn, .pl-agenda .hero-actions .btn { justify-content: center; }
+      .pl-delta-grid { grid-template-columns: 1fr; }
+      #dolores .problems-grid { grid-template-columns: 1fr; }
+      .pl-diff { padding: 32px 22px; }
+      .pl-band { padding: 24px 22px; }
+      .pl-band .btn { width: 100%; justify-content: center; }
+      .pl-plan { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#inicio" class="nav-logo">
+        <img src="/media/logo.svg" alt="Praxis Delta" class="nav-logo-img" id="navLogoImg" />
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#dolores">¿Te suena?</a></li>
+        <li><a href="#metodo">Método DELTA</a></li>
+        <li><a href="#opciones">Cómo trabajamos</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL" target="_blank" rel="noopener" class="nav-cta">Agenda tu diagnóstico</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+          <span aria-hidden="true">
+            <img id="themeIconImg" src="https://img.icons8.com/fluency/48/crescent-moon.png" alt="Modo oscuro" />
+          </span>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#dolores"   class="mob-link">¿Te suena?</a></li>
+      <li><a href="#metodo"    class="mob-link">Método DELTA</a></li>
+      <li><a href="#opciones"  class="mob-link">Cómo trabajamos</a></li>
+      <li><a href="#preguntas" class="mob-link">Preguntas</a></li>
+      <li><a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL" target="_blank" rel="noopener" class="mob-link">Agenda tu diagnóstico</a></li>
+    </ul>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero pl-hero" id="inicio">
+    <div class="hero-bg">
+      <div class="hero-grid"></div>
+      <div class="hero-gradient"></div>
+      <div class="hero-orb hero-orb-1"></div>
+      <div class="hero-orb hero-orb-2"></div>
+      <div class="hero-orb hero-orb-3"></div>
+      <div class="pl-hero-shade"></div>
+    </div>
+
+    <div class="pl-hero-inner">
+      <div>
+        <div class="hero-badge reveal">Planeación 2027 · Método DELTA</div>
+        <h1 class="reveal-up">Que el esfuerzo de tu empresa <em>por fin se note en tus números.</em></h1>
+        <p class="hero-sub reveal-up delay-1">
+          Planeación estratégica aterrizada a tu operación para vender más, ganar más y crecer sin que todo dependa de una sola persona.
+        </p>
+        <div class="hero-actions reveal-up delay-2">
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL"
+             target="_blank" rel="noopener" class="btn btn-primary">
+            Agenda tu diagnóstico de 30 min
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#lienzo" class="btn btn-ghost">Descarga el Lienzo DELTA</a>
+        </div>
+        <p class="pl-hero-note reveal-up delay-3">Para empresarios y directores de empresas de 5 a 100 personas.</p>
+      </div>
+
+      <figure class="pl-hero-photo reveal-right">
+        <img src="/media/img_praxis/vivi1.png" alt="Vivi Cepeda, Socia Directora de Praxis Delta" />
+        <figcaption>
+          <strong>Vivi Cepeda</strong>
+          <span>Socia Directora · Líder de Planeación 2027</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- DOLORES -->
+  <section class="section problema" id="dolores">
+    <div class="container">
+      <div class="pl-section-head reveal-up">
+        <h2>¿Te suena alguna de estas?</h2>
+        <p class="section-lead">Casi nunca es falta de ganas ni de talento. Es que el esfuerzo se reparte en mil direcciones y nadie tiene claro qué es lo que de verdad mueve el negocio.</p>
+      </div>
+
+      <div class="problems-grid">
+        <div class="problem-card pl-pain-card reveal-card">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <h3>“Trabajamos muchísimo y no crecemos.”</h3>
+          <p>Corrieron todo el año, lanzaron cosas, contrataron… y cerraron casi igual que el año pasado.</p>
+        </div>
+        <div class="problem-card pl-pain-card reveal-card" data-delay="80">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+          <h3>“Trabajamos mucho, pero no tenemos un plan.”</h3>
+          <p>Sin un plan claro, cada área jala hacia su lado o el día se va en apagar incendios, y lo importante nunca llega.</p>
+        </div>
+        <div class="problem-card pl-pain-card reveal-card" data-delay="160">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <h3>“Vendemos más, pero ganamos menos.”</h3>
+          <p>La facturación sube y el flujo sigue ahorcado. No está claro qué clientes y productos dejan dinero.</p>
+        </div>
+        <div class="problem-card pl-pain-card reveal-card">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></div>
+          <h3>“Estamos estancados.”</h3>
+          <p>Las ventas llevan tiempo planas y otros, más rápidos, se llevan a tus clientes. Sabes que hay que hacer algo distinto, pero no qué.</p>
+        </div>
+        <div class="problem-card pl-pain-card reveal-card" data-delay="80">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>“No nos alcanza el día para hacer crecer el negocio.”</h3>
+          <p>Si todo pasa por una sola persona, la empresa solo crece hasta donde le alcanza la agenda.</p>
+        </div>
+        <div class="problem-card pl-pain-card reveal-card" data-delay="160">
+          <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <h3>“Cada socio jala para su lado.”</h3>
+          <p>Socios, directivos o familia con prioridades distintas: decisiones que se atoran y dinero que se va en cada desacuerdo.</p>
+        </div>
+      </div>
+
+      <div class="pl-band pl-on-dark reveal-up">
+        <p>Si dijiste “sí” a una, 2027 puede ser distinto.</p>
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL"
+           target="_blank" rel="noopener" class="btn btn-primary">
+          Platiquémoslo 30 minutos
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÉTODO DELTA -->
+  <section class="section metodo" id="metodo" style="background: var(--bg);">
+    <div class="container">
+      <div class="pl-section-head reveal-up">
+        <span class="section-tag">Cómo lo hacemos</span>
+        <h2>Método DELTA para una planeación estratégica efectiva</h2>
+      </div>
+
+      <div class="pl-delta-grid">
+        <div class="pl-delta-card reveal-card">
+          <span class="pl-delta-letter">D</span>
+          <h3>Diseñar el futuro</h3>
+          <p class="pl-delta-q">¿Qué resultado queremos y a dónde queremos llegar?</p>
+          <p class="pl-delta-d">¿Cuánto tiene que crecer tu empresa en 2027? Si la meta no te emociona (y te asusta un poco), es muy chica.</p>
+        </div>
+        <div class="pl-delta-card reveal-card" data-delay="80">
+          <span class="pl-delta-letter">E</span>
+          <h3>Encontrar dónde está el dinero</h3>
+          <p class="pl-delta-q">¿Qué dicen tus clientes y tus números?</p>
+          <p class="pl-delta-d">Nadie conoce mejor la dinámica de tu empresa que tú y tu equipo. A veces solo hay que volver a mirar y analizar.</p>
+        </div>
+        <div class="pl-delta-card reveal-card" data-delay="160">
+          <span class="pl-delta-letter">L</span>
+          <h3>Leer qué lo frena</h3>
+          <p class="pl-delta-q">¿Dónde está la palanca que mueve todo lo demás? ¿Qué evita que la aguja se mueva al ritmo que necesitas?</p>
+          <p class="pl-delta-d">Lo analizamos y marcamos soluciones y alternativas.</p>
+        </div>
+        <div class="pl-delta-card reveal-card" data-delay="240">
+          <span class="pl-delta-letter">T</span>
+          <h3>Trazar la ruta: un plan 100% accionable</h3>
+          <p class="pl-delta-q">3 a 5 prioridades, con responsable y número.</p>
+          <p class="pl-delta-d">Qué hace tu equipo día a día: un mapa de ruta dinámico.</p>
+        </div>
+        <div class="pl-delta-card reveal-card" data-delay="320">
+          <span class="pl-delta-letter">A</span>
+          <h3>Accionar cada mes</h3>
+          <p class="pl-delta-q">Revisamos avances y ajustamos para que se note en resultados.</p>
+          <p class="pl-delta-d">Lo que no se mide no se mejora: esta es la clave para llegar a fin de 2027 con mejores resultados.</p>
+        </div>
+      </div>
+
+      <div class="pl-diff reveal-up">
+        <span class="section-tag">Nuestro diferenciador</span>
+        <h3>Herramientas de gran empresa, potenciadas con inteligencia artificial, al alcance de la tuya.</h3>
+        <p>Usamos las herramientas empresariales que hoy están dando resultados en las grandes empresas, actualizadas con inteligencia artificial. Nuestros agentes automatizados investigan tu mercado, analizan tus números y la voz de tus clientes, y nos dan la información que tu empresa necesita para tomar mejores decisiones.</p>
+        <div class="pl-chips">
+          <span>Agentes de IA automatizados</span>
+          <span>Herramientas de grandes empresas</span>
+          <span>Decisiones con información, no con suposiciones</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPCIONES -->
+  <section class="section problema" id="opciones">
+    <div class="container">
+      <div class="pl-section-head reveal-up">
+        <h2>Elige cómo quieres trabajar tu 2027</h2>
+        <p class="section-lead">El mismo método, tres niveles. Cambia quién hace el trabajo y la profundidad.</p>
+      </div>
+
+      <div class="pl-plans">
+        <div class="pl-plan reveal-card">
+          <span class="pl-plan-kicker">Te enseñamos a hacerlo</span>
+          <h3>DELTA Kit</h3>
+          <p>Para empresarios y directivos que quieren aprender a armar su plan, o con presupuesto acotado.</p>
+          <ul>
+            <li>Taller de 2 sesiones</li>
+            <li>Lienzo DELTA y hojas de trabajo</li>
+            <li>Guía para aplicarlo con tu equipo</li>
+          </ul>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL"
+             target="_blank" rel="noopener" class="btn btn-ghost">Quiero aprender</a>
+        </div>
+
+        <div class="pl-plan featured pl-on-dark reveal-card" data-delay="100">
+          <div class="pl-plan-top">
+            <span class="pl-plan-kicker">Lo hacemos juntos</span>
+            <span class="pl-badge">El más elegido</span>
+          </div>
+          <h3>DELTA Sprint</h3>
+          <p>De uno a dos días con tu equipo directivo (5 a 15 personas). Llegamos con la tarea hecha.</p>
+          <ul>
+            <li>Las 3 a 5 prioridades que mueven tus ventas y utilidad</li>
+            <li>Un responsable y un número para cada una</li>
+            <li>Plan de 90 días para arrancar el año</li>
+          </ul>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL"
+             target="_blank" rel="noopener" class="btn btn-primary">
+            Quiero mi Sprint
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="pl-plan reveal-card" data-delay="200">
+          <span class="pl-plan-kicker">Lo hacemos por ti</span>
+          <h3>DELTA 360</h3>
+          <p>Para el empresario o director que quiere el plan hecho y aterrizado, sin cargarlo solo.</p>
+          <ul>
+            <li>Plan estratégico completo, aterrizado a tu operación: proyecto con entregables, directrices, prioridades estratégicas, hoja de ruta y plan 100% accionable</li>
+            <li>Tablero de KPIs</li>
+            <li>Sesiones de trabajo con el equipo (discovery y aterrizaje)</li>
+            <li>Plan para comunicarlo a todo tu equipo</li>
+          </ul>
+          <p class="pl-plan-time">Proyecto de 6 a 10 semanas</p>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL"
+             target="_blank" rel="noopener" class="btn btn-ghost">Quiero mi plan estratégico 360</a>
+        </div>
+      </div>
+
+      <div class="pl-pulso reveal-up">
+        <h3>DELTA Pulso: te acompañamos mes a mes</h3>
+        <p>Con cualquiera de los tres: tablero vivo y una junta mensual para que el plan se note en tus resultados.</p>
+      </div>
+      <p class="pl-help reveal-up">¿No sabes cuál te conviene? Para eso es el diagnóstico: te recomendamos el que de verdad necesitas, aunque sea el más sencillo.</p>
+    </div>
+  </section>
+
+  <!-- QUIÉN -->
+  <section class="section quienes" id="quien">
+    <div class="container pl-who">
+      <div class="pl-who-photo reveal-left">
+        <img src="/media/img_praxis/vivi2.png" alt="Vivi Cepeda, Socia Directora de Praxis Delta" />
+      </div>
+      <div class="reveal-right">
+        <span class="section-tag">Líder de proyecto · Planeación 2027</span>
+        <h2>Vivi Cepeda, Socia Directora de Praxis Delta</h2>
+        <p>No es una consultora de libro. Vivi lleva cerca de 20 años en consultoría, trabajando dentro de empresas de todos los giros. Ha sido Directora General en Ecuador y México durante la transformación de varias empresas, liderando su mejora continua, así que sabe lo que cuesta ejecutar un plan en la operación del día a día.</p>
+        <p>Imparte talleres, charlas y conferencias de planeación estratégica, y junto con el equipo de Praxis Delta desarrolló el Método DELTA con lo que hoy funciona en las empresas. Hoy lidera el proyecto Planeación 2027 para acompañar a empresarios y directores a que su esfuerzo se convierta en resultados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS -->
+  <section class="section problema" id="preguntas">
+    <div class="container">
+      <div class="pl-section-head center reveal-up">
+        <span class="section-tag">Preguntas frecuentes</span>
+        <h2>Lo que nos suelen preguntar</h2>
+      </div>
+      <div class="pl-faq reveal-up">
+        <details open>
+          <summary>¿Sirve si mi empresa es chica?</summary>
+          <p>Sí. DELTA está hecho para PyMEs y empresas de 5 a 100 empleados en promedio: un plan en un solo documento y revisiones mensuales, no planes de 80 hojas.</p>
+        </details>
+        <details>
+          <summary>¿Cuánto tiempo le tiene que dedicar mi equipo?</summary>
+          <p>En el Sprint, uno o dos días más un trabajo previo corto. En el 360, unas cuantas sesiones de levantamiento de información, discovery y aterrizaje: el trabajo pesado lo hacemos nosotros.</p>
+        </details>
+        <details>
+          <summary>¿Qué pasa con la información de mi empresa?</summary>
+          <p>Trabajamos con un acuerdo de confidencialidad (NDA). Los agentes de IA investigan, facilitan, ordenan y analizan la información relevante, pero las decisiones siempre son de tu equipo.</p>
+        </details>
+        <details>
+          <summary>¿Cuál me conviene?</summary>
+          <p>Depende de tu equipo, tu tiempo y tu presupuesto. En el diagnóstico te decimos cuál, aunque sea el más sencillo.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDA + LIENZO -->
+  <section class="cta-banner pl-agenda pl-on-dark" id="agenda">
+    <div class="cta-bg-orb"></div>
+    <div class="pl-agenda-inner">
+      <div class="reveal-left">
+        <h2>Haz que 2027 no sea otro año de mucho esfuerzo y pocos resultados.</h2>
+        <p class="pl-lead">En 30 minutos revisamos dónde está hoy tu negocio, dónde está tu mayor oportunidad para 2027 y te recomendamos la ruta que más te conviene. Saldrás con <strong>claridad</strong>, trabajemos juntos o no.</p>
+        <div class="hero-actions">
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL"
+             target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+            Agenda tu diagnóstico
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/525560914901?text=Hola%2C%20requiero%20m%C3%A1s%20informaci%C3%B3n%20del%20Diagn%C3%B3stico%20de%20Planeaci%C3%B3n%20Estrat%C3%A9gica%202027."
+             target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Pregúntanos por WhatsApp</a>
+        </div>
+        <p class="pl-agenda-note">Sesión de 30 minutos por videollamada.</p>
+      </div>
+
+      <div class="contacto-form pl-lienzo reveal-right" id="lienzo">
+        <h3>¿Aún no? Llévate el Lienzo DELTA</h3>
+        <p>Tu plan 2027 en un solo documento, con las 5 preguntas que trabajamos con nuestros clientes. Gratis.</p>
+
+        <form id="lienzoForm" novalidate style="display:flex; flex-direction:column; gap:14px;">
+          <div class="form-group">
+            <label for="lzNombre">Nombre</label>
+            <input type="text" id="lzNombre" placeholder="Tu nombre" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="lzCorreo">Correo</label>
+            <input type="email" id="lzCorreo" placeholder="tu@empresa.com" autocomplete="email" required />
+          </div>
+          <p class="pl-error" id="lzError" role="alert" hidden>Escribe tu nombre y un correo válido para recibir el Lienzo.</p>
+          <button type="submit" class="btn btn-primary btn-full">Quiero el Lienzo</button>
+        </form>
+
+        <div class="form-success" id="lienzoOk" hidden>
+          <h3 id="lzGracias">¡Gracias! Aquí está tu Lienzo DELTA.</h3>
+          <a href="https://drive.google.com/file/d/1v-JJAYheb0_jw69EEY-c_gPhUZA2Yq9-/view?usp=sharing"
+             target="_blank" rel="noopener" class="btn btn-primary btn-full">Abrir el Lienzo DELTA</a>
+          <p>¿Quieres llenarlo con nosotros? <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL" target="_blank" rel="noopener" style="color: var(--teal-lite); font-weight: 600;">Agenda tu diagnóstico de 30 minutos.</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <img src="/media/logo.svg" alt="Praxis Delta" class="footer-logo-img" id="footerLogoImg" />
+        </div>
+        <p>Consultoría empresarial · Planeación estratégica · Ciudad de México</p>
+      </div>
+      <div class="footer-links">
+        <a href="#dolores">¿Te suena?</a>
+        <a href="#metodo">Método DELTA</a>
+        <a href="#opciones">Cómo trabajamos</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="/">praxisdelta.com</a>
+      </div>
+      <div class="footer-contact">
+        <p><a href="mailto:Consultora@praxisdelta.com">Consultora@praxisdelta.com</a></p>
+        <p><a href="https://wa.me/525560914901?text=Hola%2C%20requiero%20m%C3%A1s%20informaci%C3%B3n%20del%20Diagn%C3%B3stico%20de%20Planeaci%C3%B3n%20Estrat%C3%A9gica%202027." target="_blank" rel="noopener">WhatsApp (+52) 55 6091 4901</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Praxis Delta. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/525560914901?text=Hola%2C%20requiero%20m%C3%A1s%20informaci%C3%B3n%20del%20Diagn%C3%B3stico%20de%20Planeaci%C3%B3n%20Estrat%C3%A9gica%202027."
+     target="_blank" rel="noopener" class="whatsapp-float" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+  </a>
+
+  <script defer src="/_vercel/insights/script.js"></script>
+  <script>
+    (function () {
+      /* ── Tema claro / oscuro (comparte preferencia con la página raíz) ── */
+      var theme = 'dark';
+      try { theme = localStorage.getItem('pd_theme') || 'dark'; } catch (e) {}
+      var themeToggle = document.getElementById('themeToggle');
+      var themeIconImg = document.getElementById('themeIconImg');
+      var logos = [document.getElementById('navLogoImg'), document.getElementById('footerLogoImg')];
+
+      function applyTheme(t) {
+        theme = t;
+        try { localStorage.setItem('pd_theme', t); } catch (e) {}
+        document.body.classList.toggle('light-theme', t === 'light');
+        logos.forEach(function (img) {
+          if (img) img.src = t === 'light' ? '/media/logoazu.svg' : '/media/logo.svg';
+        });
+        if (themeIconImg) {
+          themeIconImg.src = t === 'light'
+            ? 'https://img.icons8.com/fluency/48/sun.png'
+            : 'https://img.icons8.com/fluency/48/crescent-moon.png';
+          themeIconImg.alt = t === 'light' ? 'Modo claro' : 'Modo oscuro';
+        }
+      }
+      if (themeToggle) themeToggle.addEventListener('click', function () {
+        applyTheme(theme === 'dark' ? 'light' : 'dark');
+      });
+      applyTheme(theme);
+
+      /* ── Navbar + menú móvil ── */
+      var navbar = document.getElementById('navbar');
+      var hamburger = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
+
+      function syncMenu() {
+        if (!mobileMenu || !navbar) return;
+        var h = navbar.offsetHeight;
+        mobileMenu.style.top = h + 'px';
+        mobileMenu.style.height = 'calc(100vh - ' + h + 'px)';
+      }
+      function closeMenu() {
+        mobileMenu.classList.remove('open');
+        hamburger.classList.remove('open');
+        navbar.classList.remove('menu-open');
+        document.body.style.overflow = '';
+      }
+      window.addEventListener('scroll', function () {
+        navbar.classList.toggle('scrolled', window.scrollY > 40);
+        syncMenu();
+      }, { passive: true });
+      window.addEventListener('resize', syncMenu);
+      syncMenu();
+
+      hamburger.addEventListener('click', function () {
+        var open = mobileMenu.classList.toggle('open');
+        hamburger.classList.toggle('open', open);
+        navbar.classList.toggle('menu-open', open);
+        document.body.style.overflow = open ? 'hidden' : '';
+      });
+      document.querySelectorAll('.mob-link').forEach(function (a) { a.addEventListener('click', closeMenu); });
+
+      /* ── Scroll suave a anclas ── */
+      document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+        a.addEventListener('click', function (e) {
+          var target = document.querySelector(a.getAttribute('href'));
+          if (!target) return;
+          e.preventDefault();
+          window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+        });
+      });
+
+      /* ── Animaciones de aparición ── */
+      var revealEls = document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right, .reveal-card');
+      if ('IntersectionObserver' in window) {
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var el = entry.target;
+            setTimeout(function () { el.classList.add('revealed'); }, parseInt(el.dataset.delay || 0, 10));
+            obs.unobserve(el);
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        revealEls.forEach(function (el) { obs.observe(el); });
+      } else {
+        revealEls.forEach(function (el) { el.classList.add('revealed'); });
+      }
+
+      /* ── Formulario del Lienzo DELTA ── */
+      var form = document.getElementById('lienzoForm');
+      var ok = document.getElementById('lienzoOk');
+      var err = document.getElementById('lzError');
+      var nombre = document.getElementById('lzNombre');
+      var correo = document.getElementById('lzCorreo');
+      [nombre, correo].forEach(function (i) { i.addEventListener('input', function () { err.hidden = true; }); });
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var n = nombre.value.trim();
+        var c = correo.value.trim();
+        if (n.length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c)) {
+          document.getElementById('lzGracias').textContent = '¡Gracias, ' + n + '! Aquí está tu Lienzo DELTA.';
+          form.hidden = true;
+          ok.hidden = false;
+        } else {
+          err.hidden = false;
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
