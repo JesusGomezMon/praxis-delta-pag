@@ -1341,7 +1341,8 @@ body.light-theme .navbar.menu-open {
 /* ════════════════════════════
    ANNOUNCEMENT BAR (Planeación 2027)
 ════════════════════════════ */
-:root { --bar-h: 40px; }
+:root { --bar-h: 0px; }
+:root:has(#announceBar) { --bar-h: 40px; }
 .announce-bar {
   position: fixed;
   top: 0; left: 0; right: 0;
