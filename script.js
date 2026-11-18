@@ -107,11 +107,20 @@ applyTheme(currentTheme);
    NAVBAR SCROLL
 ════════════════════════════ */
 const navbar = document.getElementById('navbar');
+
+/* Announcement bar: keep --bar-h equal to its real height (it can wrap on small screens) */
+const announceBar = document.getElementById('announceBar');
+function syncBarHeight() {
+  if (!announceBar) return;
+  document.documentElement.style.setProperty('--bar-h', `${announceBar.offsetHeight}px`);
+}
+syncBarHeight();
+window.addEventListener('resize', syncBarHeight);
 function syncMobileMenuOffset() {
   if (!mobileMenu || !navbar) return;
-  const navHeight = navbar.offsetHeight;
-  mobileMenu.style.top = `${navHeight}px`;
-  mobileMenu.style.height = `calc(100vh - ${navHeight}px)`;
+  const navBottom = navbar.getBoundingClientRect().bottom;
+  mobileMenu.style.top = `${navBottom}px`;
+  mobileMenu.style.height = `calc(100vh - ${navBottom}px)`;
 }
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
@@ -218,7 +227,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = document.querySelector(anchor.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
-    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+    window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - (navbar ? navbar.getBoundingClientRect().bottom + 8 : 80), behavior: 'smooth' });
   });
 });
 

@@ -4,6 +4,11 @@
 
 const translations = {
   es: {
+    /* ── BARRA PLANEACIÓN 2027 ── */
+    bar_title: "Planeación 2027 ya está abierta.",
+    bar_msg:   "Que el esfuerzo de tu empresa por fin se note en tus números.",
+    bar_cta:   "Conoce el programa",
+
     /* ── NAV ── */
     nav_problema:  "El Problema",
     nav_metodo:    "Método",
@@ -145,6 +150,11 @@ const translations = {
   },
 
   en: {
+    /* ── PLANNING 2027 BAR ── */
+    bar_title: "Planning 2027 is now open.",
+    bar_msg:   "Make your company's effort finally show in your numbers.",
+    bar_cta:   "Discover the program",
+
     /* ── NAV ── */
     nav_problema:  "The Problem",
     nav_metodo:    "Method",
