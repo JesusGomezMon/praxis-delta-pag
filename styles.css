@@ -1380,3 +1380,132 @@ body.light-theme .navbar.menu-open {
 @media (max-width: 640px) {
   .hero { padding-top: calc(100px + var(--bar-h)); }
 }
+
+/* ════════════════════════════
+   PLANEACIÓN 2027 – SECCIÓN DESTACADA
+════════════════════════════ */
+.p27 { background: var(--bg); padding: 72px 0; }
+.p27-card {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+  background: linear-gradient(135deg, var(--bg-card), var(--bg-2));
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 48px;
+  position: relative;
+  overflow: hidden;
+}
+.p27-card::before {
+  content: '';
+  position: absolute;
+  width: 480px; height: 480px;
+  left: -160px; top: -220px;
+  background: radial-gradient(circle, rgba(61,189,206,0.20), transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.p27-text { position: relative; }
+.p27-text h2 { font-size: clamp(1.8rem, 3.4vw, 2.6rem); margin-bottom: 16px; }
+.p27-lead { color: var(--muted); font-size: 1.04rem; line-height: 1.75; margin-bottom: 22px; }
+.p27-points { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }
+.p27-points li { position: relative; padding-left: 26px; color: var(--text); font-size: 0.95rem; }
+.p27-points li::before {
+  content: '';
+  position: absolute; left: 0; top: 0.42em;
+  width: 13px; height: 7px;
+  border-left: 2px solid var(--teal-lite);
+  border-bottom: 2px solid var(--teal-lite);
+  transform: rotate(-45deg);
+}
+.p27-actions { display: flex; flex-wrap: wrap; gap: 14px; }
+.p27-actions .btn-ghost { border-color: rgba(89,205,221,0.45); }
+.p27-photo {
+  position: relative;
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  box-shadow: var(--shadow);
+}
+.p27-photo img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+.p27-photo:hover img { transform: scale(1.04); }
+.p27-photo-badge {
+  position: absolute; left: 14px; bottom: 14px;
+  background: rgba(7,49,74,0.85);
+  color: #f4fbff;
+  border: 1px solid rgba(89,205,221,0.35);
+  font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 6px 12px; border-radius: 50px;
+}
+
+@media (max-width: 900px) {
+  .p27-card { grid-template-columns: 1fr; padding: 32px 24px; gap: 32px; }
+  .p27-photo { order: -1; }
+}
+@media (max-width: 640px) {
+  .p27 { padding: 48px 0; }
+  .p27-actions { flex-direction: column; }
+  .p27-actions .btn { justify-content: center; }
+}
+
+/* ════════════════════════════
+   PLANEACIÓN 2027 – POPUP
+════════════════════════════ */
+.p27-modal[hidden] { display: none; }
+.p27-modal {
+  position: fixed; inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+.p27-modal-backdrop {
+  position: absolute; inset: 0;
+  background: rgba(3,20,32,0.66);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: p27-fade 0.3s ease;
+}
+.p27-modal-box {
+  position: relative;
+  width: min(460px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+  animation: p27-pop 0.4s cubic-bezier(0.16,1,0.3,1);
+}
+.p27-modal-img { aspect-ratio: 16 / 9; overflow: hidden; }
+.p27-modal-img img { width: 100%; height: 100%; object-fit: cover; object-position: center 40%; }
+.p27-modal-body { padding: 26px 28px 24px; }
+.p27-modal-body .section-tag { margin-bottom: 14px; }
+.p27-modal-body h3 { font-size: 1.35rem; line-height: 1.25; margin-bottom: 10px; }
+.p27-modal-body p { color: var(--muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 22px; }
+.p27-modal-actions { display: flex; flex-direction: column; gap: 10px; align-items: center; }
+.p27-modal-later {
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); font: inherit; font-size: 0.88rem;
+  padding: 6px 10px;
+}
+.p27-modal-later:hover { color: var(--white); }
+.p27-modal-close {
+  position: absolute; top: 10px; right: 10px;
+  z-index: 1;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(7,49,74,0.75);
+  color: #fff;
+  font-size: 1.4rem; line-height: 1;
+  cursor: pointer;
+}
+.p27-modal-close:hover { background: var(--teal-mid); }
+@keyframes p27-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes p27-pop { from { opacity: 0; transform: translateY(24px) scale(0.96); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) {
+  .p27-modal-backdrop, .p27-modal-box { animation: none; }
+}

@@ -200,6 +200,34 @@
     </div>
   </section>
 
+  <!-- PLANEACIÓN 2027 (destacado debajo del hero) -->
+  <section class="section p27" id="planeacion-2027">
+    <div class="container p27-card reveal-up">
+      <div class="p27-text">
+        <span class="section-tag" data-i18n="p27_tag">Nuevo · Planeación 2027</span>
+        <h2 data-i18n="p27_title">Que el esfuerzo de tu empresa por fin se note en tus números.</h2>
+        <p class="p27-lead" data-i18n="p27_lead">Planeación estratégica aterrizada a tu operación con el Método DELTA, para vender más, ganar más y crecer sin que todo dependa de una sola persona.</p>
+        <ul class="p27-points">
+          <li data-i18n="p27_p1">Las 3 a 5 prioridades que mueven tus ventas y utilidad</li>
+          <li data-i18n="p27_p2">Un responsable y un número para cada una</li>
+          <li data-i18n="p27_p3">Seguimiento mes a mes para que se note en resultados</li>
+        </ul>
+        <div class="p27-actions">
+          <a href="/planeacion-2027/" class="btn btn-primary">
+            <span data-i18n="p27_cta">Conoce el programa</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ17qJBFUsodjl_Cu7hghU8h230wRk0Ok8UwyIoF2m8_pzpLZ_b7Vtjwh_OO1uDjYePyRg7_GqsL" target="_blank" rel="noopener" class="btn btn-ghost" data-i18n="p27_cta2">Agenda tu diagnóstico de 30 min</a>
+        </div>
+      </div>
+      <a href="/planeacion-2027/" class="p27-photo" aria-label="Planeación 2027">
+        <img src="media/img_praxis/planeacion-sesion.jpg" alt="Vivi Cepeda impartiendo una sesión de planeación a un equipo directivo" width="1195" height="896" loading="lazy" />
+        <span class="p27-photo-badge" data-i18n="p27_badge">Método DELTA</span>
+      </a>
+    </div>
+  </section>
+
+
   <!-- PROBLEMA -->
   <section class="section problema" id="problema">
     <div class="container">
@@ -690,6 +718,29 @@
       <p data-i18n="footer_copy">© 2026 Praxis Delta. Todos los derechos reservados.</p>
     </div>
   </footer>
+
+  <!-- POPUP PLANEACIÓN 2027 (aparece una vez, tras scroll o tiempo) -->
+  <div class="p27-modal" id="p27Modal" role="dialog" aria-modal="true" aria-labelledby="p27ModalTitle" hidden>
+    <div class="p27-modal-backdrop" data-p27-close></div>
+    <div class="p27-modal-box">
+      <button class="p27-modal-close" type="button" aria-label="Cerrar" data-p27-close>&times;</button>
+      <div class="p27-modal-img">
+        <img src="media/img_praxis/planeacion-sesion.jpg" alt="" width="1195" height="896" loading="lazy" />
+      </div>
+      <div class="p27-modal-body">
+        <span class="section-tag" data-i18n="p27_pop_tag">Planeación 2027 ya está abierta</span>
+        <h3 id="p27ModalTitle" data-i18n="p27_pop_title">Haz que 2027 no sea otro año de mucho esfuerzo y pocos resultados.</h3>
+        <p data-i18n="p27_pop_text">En 30 minutos revisamos dónde está hoy tu negocio y te recomendamos la ruta que más te conviene.</p>
+        <div class="p27-modal-actions">
+          <a href="/planeacion-2027/" class="btn btn-primary btn-full">
+            <span data-i18n="p27_cta">Conoce el programa</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <button type="button" class="p27-modal-later" data-p27-close data-i18n="p27_pop_later">Ahora no</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- WHATSAPP FLOAT -->
   <a href="https://api.whatsapp.com/send?phone=5560914901&text=Hola%20Praxis%20Delta,%20me%20interesa%20agendar%20una%20sesi%C3%B3n%20exploratoria%20sin%20costo%20para%20mi%20empresa.%20%20Mi%20nombre%20es"
