@@ -329,3 +329,64 @@ document.querySelectorAll('.problem-card, .servicio-card').forEach(card => {
   });
   card.addEventListener('mouseleave', () => { card.style.transform = ''; });
 });
+
+/* ════════════════════════════
+   PLANEACIÓN 2027 – POPUP
+   Aparece una sola vez por visitante (cada 7 días), cuando baja
+   a la mitad de la página o tras 20 segundos. Nunca al cargar.
+════════════════════════════ */
+(function () {
+  const modal = document.getElementById('p27Modal');
+  if (!modal) return;
+  const KEY = 'pd_p27_popup';
+  const WAIT_DAYS = 7;
+  let lastSeen = 0;
+  try { lastSeen = parseInt(localStorage.getItem(KEY) || '0', 10); } catch (e) {}
+  if (Date.now() - lastSeen < WAIT_DAYS * 864e5) return;
+
+  let shown = false;
+  let lastFocus = null;
+  let timer = null;
+
+  function remember() {
+    try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+  }
+  function cleanup() {
+    clearTimeout(timer);
+    window.removeEventListener('scroll', onScroll);
+  }
+  function open() {
+    if (shown) return;
+    const menu = document.getElementById('mobileMenu');
+    if (menu && menu.classList.contains('open')) return;
+    shown = true;
+    cleanup();
+    remember();
+    lastFocus = document.activeElement;
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    modal.querySelector('.p27-modal-close').focus();
+  }
+  function close() {
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  function onScroll() {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    if (max > 0 && window.scrollY / max >= 0.5) open();
+  }
+
+  timer = setTimeout(open, 20000);
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  modal.querySelectorAll('[data-p27-close]').forEach(el => el.addEventListener('click', close));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && !modal.hidden) close();
+  });
+
+  /* Si la persona ya fue a la landing desde la franja o la sección, no mostrar el popup */
+  document.querySelectorAll('a[href^="/planeacion-2027"]').forEach(a =>
+    a.addEventListener('click', () => { if (!shown) { remember(); cleanup(); shown = true; } })
+  );
+})();

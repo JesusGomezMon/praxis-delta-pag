@@ -4,6 +4,21 @@
 
 const translations = {
   es: {
+    /* ── PLANEACIÓN 2027 (sección y popup) ── */
+    p27_tag: "Nuevo · Planeación 2027",
+    p27_title: "Que el esfuerzo de tu empresa por fin se note en tus números.",
+    p27_lead: "Planeación estratégica aterrizada a tu operación con el Método DELTA, para vender más, ganar más y crecer sin que todo dependa de una sola persona.",
+    p27_p1: "Las 3 a 5 prioridades que mueven tus ventas y utilidad",
+    p27_p2: "Un responsable y un número para cada una",
+    p27_p3: "Seguimiento mes a mes para que se note en resultados",
+    p27_cta: "Conoce el programa",
+    p27_cta2: "Agenda tu diagnóstico de 30 min",
+    p27_badge: "Método DELTA",
+    p27_pop_tag: "Planeación 2027 ya está abierta",
+    p27_pop_title: "Haz que 2027 no sea otro año de mucho esfuerzo y pocos resultados.",
+    p27_pop_text: "En 30 minutos revisamos dónde está hoy tu negocio y te recomendamos la ruta que más te conviene.",
+    p27_pop_later: "Ahora no",
+
     /* ── BARRA PLANEACIÓN 2027 ── */
     bar_title: "Planeación 2027 ya está abierta.",
     bar_msg:   "Que el esfuerzo de tu empresa por fin se note en tus números.",
@@ -150,6 +165,21 @@ const translations = {
   },
 
   en: {
+    /* ── PLANNING 2027 (section & popup) ── */
+    p27_tag: "New · Planning 2027",
+    p27_title: "Make your company's effort finally show in your numbers.",
+    p27_lead: "Strategic planning grounded in your operation with the DELTA Method, so you sell more, earn more and grow without everything depending on one person.",
+    p27_p1: "The 3 to 5 priorities that drive your sales and profit",
+    p27_p2: "An owner and a number for each one",
+    p27_p3: "Monthly follow-up so it shows in your results",
+    p27_cta: "Discover the program",
+    p27_cta2: "Book your 30-min diagnosis",
+    p27_badge: "DELTA Method",
+    p27_pop_tag: "Planning 2027 is now open",
+    p27_pop_title: "Don't let 2027 be another year of hard work and few results.",
+    p27_pop_text: "In 30 minutes we review where your business stands today and recommend the path that suits you best.",
+    p27_pop_later: "Not now",
+
     /* ── PLANNING 2027 BAR ── */
     bar_title: "Planning 2027 is now open.",
     bar_msg:   "Make your company's effort finally show in your numbers.",
