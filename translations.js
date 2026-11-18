@@ -99,7 +99,7 @@ const translations = {
     con_title: "Contáctanos",
     con_lead:  "Estamos listos para acompañarte en el siguiente nivel de tu empresa.",
     con_phone: "Teléfono / WhatsApp",
-    con_email: "Correos",
+    con_email: "Correo",
     con_wa:    "WhatsApp Directo",
     con_wa_link: "Iniciar conversación →",
 
