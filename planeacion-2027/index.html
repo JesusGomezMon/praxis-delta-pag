@@ -563,6 +563,9 @@
             <label for="lzCorreo">Correo</label>
             <input type="email" id="lzCorreo" placeholder="tu@empresa.com" autocomplete="email" required />
           </div>
+          <!-- Campo trampa anti-spam: invisible para personas -->
+          <input type="text" name="_honey" id="lzHoney" tabindex="-1" autocomplete="off" aria-hidden="true"
+                 style="position:absolute; left:-9999px; width:1px; height:1px; opacity:0;" />
           <p class="pl-error" id="lzError" role="alert" hidden>Escribe tu nombre y un correo válido para recibir el Lienzo.</p>
           <button type="submit" class="btn btn-primary btn-full">Quiero el Lienzo</button>
         </form>
@@ -709,6 +712,26 @@
         var n = nombre.value.trim();
         var c = correo.value.trim();
         if (n.length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(c)) {
+          /* Envía el registro por correo a Praxis Delta (FormSubmit).
+             El Lienzo se entrega aunque el envío falle, para no perder la experiencia. */
+          if (!document.getElementById('lzHoney').value) {
+            try {
+              fetch('https://formsubmit.co/ajax/Consultora@praxisdelta.com', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                body: JSON.stringify({
+                  _subject: 'Nuevo registro Lienzo DELTA – Planeación 2027: ' + n,
+                  _template: 'table',
+                  _replyto: c,
+                  Nombre: n,
+                  Correo: c,
+                  Origen: 'praxisdelta.com/planeacion-2027 · Lienzo DELTA',
+                  Fecha: new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })
+                }),
+                keepalive: true
+              }).catch(function () {});
+            } catch (x) {}
+          }
           document.getElementById('lzGracias').textContent = '¡Gracias, ' + n + '! Aquí está tu Lienzo DELTA.';
           form.hidden = true;
           ok.hidden = false;
