@@ -1337,3 +1337,46 @@ body.light-theme .navbar.menu-open {
   .proceso-step { gap: 22px; }
   .cta-banner { padding: 72px 20px; }
 }
+
+/* ════════════════════════════
+   ANNOUNCEMENT BAR (Planeación 2027)
+════════════════════════════ */
+:root { --bar-h: 40px; }
+.announce-bar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1001;
+  min-height: var(--bar-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 16px;
+  background: linear-gradient(90deg, #2798ad, #2ea4ba 50%, #59cddd);
+  color: #04263a;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  text-align: center;
+  transition: filter 0.25s;
+}
+.announce-bar:hover { filter: brightness(1.06); }
+.announce-inner { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: baseline; gap: 4px 8px; }
+.announce-bar strong { font-weight: 700; }
+.announce-msg { font-weight: 500; }
+.announce-cta {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+.announce-bar:hover .announce-cta { text-decoration-thickness: 2px; }
+.navbar { top: var(--bar-h); }
+.hero { padding-top: calc(120px + var(--bar-h)); }
+
+@media (max-width: 768px) {
+  .announce-msg { display: none; }
+  .announce-bar { font-size: 0.82rem; }
+}
+
+@media (max-width: 640px) {
+  .hero { padding-top: calc(100px + var(--bar-h)); }
+}
